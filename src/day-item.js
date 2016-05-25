@@ -1,7 +1,6 @@
 // Import some code we need
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Text,
 } from 'react-native';
 
@@ -11,14 +10,6 @@ var DayItem = React.createClass({
     return <Text style={styles.day}>
       {this.props.day}
     </Text>
-  }
-});
-
-// Style our component
-var styles = StyleSheet.create({
-  day: {
-    fontSize: 16,
-    color: '#0000FF'
   }
 });
 
