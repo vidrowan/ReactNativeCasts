@@ -17,10 +17,14 @@ var Weekdays = React.createClass({
     </View>
   },
   days: function() {
-    return DAYS.map(function(day){
-      // Called 7 times according to the DAYS array
-      return <DayItem day={day} />
-    })
+    var daysItems = [];
+
+    for(var i=0; i<7; i++){
+      var day = Moment().add(i, 'days').format('dddd');
+      daysItems.push(
+        <DayItem day={day} daysUntil={i} />
+      )
+    }
   }
 });
 
