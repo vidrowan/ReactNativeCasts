@@ -1,4 +1,5 @@
 // Impoart some code we need
+var Moment = require('moment');
 import React, { Component } from 'react';
 import {
   AppRegistry,
