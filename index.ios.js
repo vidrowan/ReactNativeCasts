@@ -15,12 +15,6 @@ var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 var Weekdays = React.createClass({
   render: function() {
     return <View style={styles.container}>
-      <Text>
-        Days of the week:
-      </Text>
-      <Text>
-        {Moment().format('ddd')}
-      </Text>
       {this.days()}
     </View>
   },
