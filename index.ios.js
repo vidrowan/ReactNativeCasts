@@ -21,7 +21,12 @@ var Weekdays = React.createClass({
     </View>
   },
   days: function() {
-    
+    days = DAYS.map(function(day){
+      // Called 7 times according to the DAYS array
+      return DayItem day={day} />
+    })
+    return days; // An array of DayItem components, one for each element in the array
+    // days = [<DayItem day="Sunday" />, <DayItem day="Mondayday" />, ]
   }
 });
 
