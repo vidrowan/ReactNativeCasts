@@ -1,6 +1,8 @@
 // Impoart some code we need
 var React = require('react-native');
 var AppRegistry = React.AppRegistry;
+var Text = React.Text;
+var View = React.View;
 
 // Create a react component
 var Weekdays = React.createClass({
