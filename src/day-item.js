@@ -17,7 +17,7 @@ var DayItem = React.createClass({
 // Style our component
 var styles = StyleSheet.create({
   day: {
-    fontSize: 10,
+    fontSize: 16,
     color: '#0000FF'
   }
 });
