@@ -1,3 +1,6 @@
+// Impoart some code we need
+var React = require('react-native');
+
 // Create a react component
 var Weekdays = React.createClass({
   render: function() {
