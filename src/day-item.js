@@ -25,13 +25,13 @@ var DayItem = React.createClass({
   },
   fontWeight: function(){
     var weight = 7 - this.props.daysUntil;
-    return weight * 100;
+    return '' + weight * 100;
   },
   fontSize: function(){
-    return 60 - 6 * this.props.daysUntil;
+    return '' + 60 - 6 * this.props.daysUntil;
   },
   lineHeight: function(){
-    return 70 - 4 * this.props.daysUntil;
+    return '' + 70 - 4 * this.props.daysUntil;
   }
 });
 
