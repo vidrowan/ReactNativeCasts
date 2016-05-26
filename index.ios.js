@@ -9,18 +9,18 @@ import {
 var Stopwatch = React.createClass({
   render: function() {
     return <View>
-      <View> {/* Yellow */}
-        <View> // Red
+      <View>
+        <View>
           <Text>
             00:00:00
           </Text>
         </View>
       </View>
-      <View> {/* Green */}
+      <View>
         {this.startStopButton()}
         {this.lapButton()}
       </View>
-      <View> {/* Blue */}
+      <View>
         <Text>
           I am a list of Laps
         </Text>
