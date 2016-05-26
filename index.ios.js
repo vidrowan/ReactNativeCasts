@@ -1,13 +1,13 @@
-var React = require('react-native');
-var {
+import React, { Component } from 'react';
+import {
+  AppRegistry,
   Text,
-  View,
-  AppRegistry
-} = React;
+  View
+} from 'react-native';
 
 var Stopwatch = React.createClass({
   render: function() {
-
+      
   }
 });
 
