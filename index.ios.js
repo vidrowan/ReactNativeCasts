@@ -11,7 +11,8 @@ import {
 var Stopwatch = React.createClass({
   getInitialState: function(){
     return {
-      timeElapsed: null
+      timeElapsed: null,
+      running: false
     }
   },
   render: function() {
@@ -53,12 +54,17 @@ var Stopwatch = React.createClass({
         </View>
   },
   handleStartPress: function() {
-    clearInterval(this.interval);
+    if(this.state.running) { // is the timer is running
+      clearInterval(this.interval);
+      this.setState({running: false});
+      return
+    }
     var startTime = new Date();
 
     this.interval = setInterval(() => {
       this.setState({
-        timeElapsed: new Date() - startTime
+        timeElapsed: new Date() - startTime,
+        running: true
       });
     }, 30);
 
