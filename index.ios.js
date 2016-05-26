@@ -61,7 +61,9 @@ var styles = StyleSheet.create({
     flex: 1
   },
   timerWrapper: { // Red
-    flex: 5
+    flex: 5,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   buttonWrapper: { // Green
     flex: 3,
