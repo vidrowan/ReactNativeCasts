@@ -65,7 +65,8 @@ var styles = StyleSheet.create({
   },
   buttonWrapper: { // Green
     flex: 3,
-    flexDirection: 'row' 
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   }
 });
 
