@@ -64,7 +64,8 @@ var styles = StyleSheet.create({
     flex: 5
   },
   buttonWrapper: { // Green
-     flex: 3
+    flex: 3,
+    flexDirection: 'row' 
   }
 });
 
