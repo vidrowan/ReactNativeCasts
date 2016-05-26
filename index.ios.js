@@ -64,8 +64,10 @@ var Stopwatch = React.createClass({
   },
   border: function(color) {
     return {
+      /*
       borderColor: color,
       borderWidth: 4
+      */
     }
   }
 });
