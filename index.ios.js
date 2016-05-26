@@ -53,6 +53,7 @@ var Stopwatch = React.createClass({
         </View>
   },
   handleStartPress: function() {
+    clearInterval(this.interval);
     var startTime = new Date();
 
     this.interval = setInterval(() => {
