@@ -14,7 +14,7 @@ var Stopwatch = React.createClass({
       timeElapsed: null,
       running: false,
       startTime: null,
-      lap: []
+      laps: []
     }
   },
   render: function() {
@@ -31,21 +31,25 @@ var Stopwatch = React.createClass({
         </View>
       </View>
       <View style={styles.footer}>
-        <Text>
-          {this.laps()}
-        </Text>
+        {this.laps()}
       </View>
     </View>
   },
   laps: function(){
-    return this.state.laps.map(function(){
+    return this.state.laps.map(function(time, index){
       return <View>
-        
+        <Text>
+          Lap #{index + 1}
+        </Text>
+        <Text>
+          {formatTime(time)}
+        </Text>
       </View>
-    })
+    });
   },
   startStopButton: function() {
     var style = this.state.running ? styles.stopButton : styles.startButton;
+
     return <TouchableHighlight
     underlayColor="gray"
     onPress={this.handleStartPress}
