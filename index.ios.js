@@ -52,6 +52,10 @@ var Stopwatch = React.createClass({
   },
   handleStartPress: function() {
     var startTime = new Date();
+
+    this.setState({
+      timeElapsed: new Date() - startTime
+    });
   },
   border: function(color) {
     return {
