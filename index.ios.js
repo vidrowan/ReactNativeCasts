@@ -1,4 +1,4 @@
-import FormatTime from 'minutes-seconds-milliseconds';
+import formatTime from 'minutes-seconds-milliseconds';
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -19,7 +19,7 @@ var Stopwatch = React.createClass({
       <View style={[styles.header, this.border('yellow')]}>
         <View style={[this.border('red'), styles.timerWrapper]}>
           <Text>
-            {this.state.timeElapsed}
+            {formatTime(this.state.timeElapsed)}
           </Text>
         </View>
         <View style={[this.border('green'), styles.buttonWrapper]}>
