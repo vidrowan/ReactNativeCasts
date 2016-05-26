@@ -60,7 +60,8 @@ var Stopwatch = React.createClass({
       this.setState({running: false});
       return
     }
-    var startTime = new Date();
+    //var startTime = new Date();
+    this.setState({startTime: new Date()})
 
     this.interval = setInterval(() => {
       this.setState({
