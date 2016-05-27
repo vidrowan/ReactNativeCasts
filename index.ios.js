@@ -8,8 +8,8 @@ import {
   View
 } from 'react-native';
 
-var Stopwatch = React.createClass({
-  getInitialState: function(){
+var StopWatch = React.createClass({
+  getInitialState: function() {
     return {
       timeElapsed: null,
       running: false,
@@ -30,6 +30,7 @@ var Stopwatch = React.createClass({
           {this.lapButton()}
         </View>
       </View>
+
       <View style={styles.footer}>
         {this.laps()}
       </View>
@@ -37,11 +38,11 @@ var Stopwatch = React.createClass({
   },
   laps: function(){
     return this.state.laps.map(function(time, index){
-      return <View>
-        <Text>
+      return <View style={styles.lap}>
+        <Text style={styles.lapText}>
           Lap #{index + 1}
         </Text>
-        <Text>
+        <Text style={styles.lapText}>
           {formatTime(time)}
         </Text>
       </View>
@@ -51,24 +52,25 @@ var Stopwatch = React.createClass({
     var style = this.state.running ? styles.stopButton : styles.startButton;
 
     return <TouchableHighlight
-    underlayColor="gray"
-    onPress={this.handleStartPress}
-    style={[styles.button, style]}
-    >
-          <Text>
-            {this.state.running ? 'Stop' : 'Start'}
-          </Text>
-        </TouchableHighlight>
+      underlayColor="gray"
+      onPress={this.handleStartPress}
+      style={[styles.button, style]}
+      >
+      <Text>
+        {this.state.running ? 'Stop' : 'Start'}
+      </Text>
+    </TouchableHighlight>
   },
   lapButton: function() {
     return <TouchableHighlight
-    underlayColor="gray"
-    onPress={this.handleLapPress}
-    style={[styles.button]}>
-          <Text>
-            Lap
-          </Text>
-        </TouchableHighlight>
+      style={styles.button}
+      underlayColor="gray"
+      onPress={this.handleLapPress}
+      >
+      <Text>
+        Lap
+      </Text>
+    </TouchableHighlight>
   },
   handleLapPress: function() {
     var lap = this.state.timeElapsed;
@@ -77,15 +79,14 @@ var Stopwatch = React.createClass({
       startTime: new Date(),
       laps: this.state.laps.concat([lap])
     });
-
   },
   handleStartPress: function() {
-    if(this.state.running) { // is the timer is running
+    if(this.state.running){
       clearInterval(this.interval);
       this.setState({running: false});
       return
     }
-    //var startTime = new Date();
+
     this.setState({startTime: new Date()});
 
     this.interval = setInterval(() => {
@@ -94,28 +95,27 @@ var Stopwatch = React.createClass({
         running: true
       });
     }, 30);
-
   }
 });
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1, //fill screen
-    alignItems: 'stretch',
+    flex: 1, // Fill the entire the screen
+    alignItems: 'stretch'
   },
   header: { // Yellow
     flex: 1
   },
-  footer: { //Blue
+  footer: { // Blue
     flex: 1
   },
   timerWrapper: { // Red
-    flex: 5,
+    flex: 5, // takes up 5/8ths of the available space
     justifyContent: 'center',
     alignItems: 'center'
   },
   buttonWrapper: { // Green
-    flex: 3,
+    flex: 3, // takes up 3/8ths of the available space
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'
@@ -136,7 +136,14 @@ var styles = StyleSheet.create({
   },
   stopButton: {
     borderColor: '#CC0000'
+  },
+  lap: {
+    justifyContent: 'space-around',
+    flexDirection: 'row'
+  },
+  lapText: {
+    fontSize: 30
   }
 });
 
-AppRegistry.registerComponent('stopwatch', () => Stopwatch);
+AppRegistry.registerComponent('stopwatch', () => StopWatch);
