@@ -30,7 +30,8 @@ var StopWatch = React.createClass({
           {this.lapButton()}
         </View>
       </View>
-
+      <View style={styles.footerPad}>
+      </View>
       <View style={styles.footer}>
         {this.laps()}
       </View>
@@ -104,10 +105,13 @@ var styles = StyleSheet.create({
     alignItems: 'stretch'
   },
   header: { // Yellow
+    flex: 11
+  },
+  footerPad: {
     flex: 1
   },
   footer: { // Blue
-    flex: 1
+    flex: 11
   },
   timerWrapper: { // Red
     flex: 5, // takes up 5/8ths of the available space
@@ -142,7 +146,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row'
   },
   lapText: {
-    fontSize: 30
+    fontSize: 20
   }
 });
 
