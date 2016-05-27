@@ -39,7 +39,8 @@ var StopWatch = React.createClass({
   },
   laps: function(){
     return this.state.laps.map(function(time, index){
-      return <View style={styles.lap}>
+      var style = index % 2 == 0 ? styles.lap : [styles.lap, styles.lapOdd];
+      return <View style={style}>
         <Text style={styles.lapText}>
           Lap #{index + 1}
         </Text>
@@ -143,7 +144,11 @@ var styles = StyleSheet.create({
   },
   lap: {
     justifyContent: 'space-around',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    backgroundColor: 'rgba(98, 167, 15, 0.3)'
+  },
+  lapOdd: {
+    backgroundColor: 'rgba(98, 167, 15, 0.7)'
   },
   lapText: {
     fontSize: 20
