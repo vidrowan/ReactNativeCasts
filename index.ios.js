@@ -1,6 +1,7 @@
 import formatTime from 'minutes-seconds-milliseconds';
 import React, { Component } from 'react';
 import {
+  ScrollView,
   AppRegistry,
   StyleSheet,
   Text,
@@ -112,7 +113,8 @@ var styles = StyleSheet.create({
     flex: 1
   },
   footer: { //Blue
-    flex: 1
+    flex: 11,
+    overflow: 'visible'
   },
   timerWrapper: { // Red
     flex: 5,
