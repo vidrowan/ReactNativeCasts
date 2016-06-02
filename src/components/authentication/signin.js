@@ -42,6 +42,9 @@ module.exports = React.createClass({
       </View>
     );
   },
+  onSignupPress: function() {
+    this.props.navigator.push({name: 'signup'});
+  },
   onPress: function() {
     // Log the user in
     Parse.User.logIn(this.state.username, this.state.password, {
