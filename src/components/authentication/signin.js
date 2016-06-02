@@ -1,16 +1,16 @@
-var React = require('react-native');
-var {
-  View,
-  Text,
+import React, { Component } from 'react';
+import {
   StyleSheet,
-  TextInput
-} = React;
+  Text,
+  TextInput,
+  View
+} from 'react-native';
 
 module.exports = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text>Sign In</Text>
+        <Text>Sign In, Yo!</Text>
       </View>
     );
   }
