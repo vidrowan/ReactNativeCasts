@@ -9,6 +9,8 @@ import {
   View
 } from 'react-native';
 
+var Signin = require('./components/authentication/signin');
+
 module.exports = React.createClass({
   getInitialState: function() {
     return {
