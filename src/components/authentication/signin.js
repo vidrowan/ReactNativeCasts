@@ -48,7 +48,11 @@ module.exports = React.createClass({
   onPress: function() {
     // Log the user in
     Parse.User.logIn(this.state.username, this.state.password, {
-      success: (user) => { console.log(user); },
+      success: (user) => {
+        this.setState({ errorMessage: "Oh, you totally just logged in." });
+        console.log("successful login for user obj: " + user);
+        this.props.navigator.push({name: 'stopwatch'});
+      },
       error: (data, error) => { this.setState({ errorMessage: error.message }); }
     });
   }

@@ -9,10 +9,12 @@ import {
 var Parse = require('parse/react-native');
 var Signin = require('./components/authentication/signin');
 var Signup = require('./components/authentication/signup');
+var Stopwatch = require('./stopwatch');
 
 var ROUTES = {
   signin: Signin,
-  signup: Signup
+  signup: Signup,
+  stopwatch: Stopwatch
 };
 
 module.exports = React.createClass({
