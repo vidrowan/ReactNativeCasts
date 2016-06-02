@@ -37,6 +37,9 @@ module.exports = React.createClass({
         <Button text={'Sign In'} onPress={this.onPress} />
       </View>
     );
+  },
+  onPress: function() {
+  // Log the user in
   }
 });
 
