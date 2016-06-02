@@ -15,9 +15,12 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <View style={styles.container}>
-        <Signin />
-      </View>
+      <Navigator
+        style={style.container}
+        initialRoute={}
+        renderScene={}
+        configureScene={() => { return Navigator.SceneConfigs.FloatFromRight; }}
+        />
     );
   }
 });
