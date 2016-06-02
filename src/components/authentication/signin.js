@@ -6,8 +6,8 @@ import {
   View
 } from 'react-native';
 
-var Parse = require('parse/react-native');
 var Button = require('../common/button');
+var Parse = require('parse/react-native');
 
 module.exports = React.createClass({
   getInitialState: function() {
