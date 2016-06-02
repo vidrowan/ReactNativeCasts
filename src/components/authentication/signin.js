@@ -40,7 +40,11 @@ module.exports = React.createClass({
     );
   },
   onPress: function() {
-  // Log the user in
+    // Log the user in
+    Parse.User.logIn(this.state.username, this.state.password, {
+      success: (user) => { console.log(user); },
+      error: (data, error) => { console.log(data, error); }
+    });
   }
 });
 
