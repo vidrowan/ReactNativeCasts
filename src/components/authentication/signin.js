@@ -20,7 +20,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text>Sign In</Text>
+        <Text>You must sign in to use the Stop Watch</Text>
         <Text style={styles.label}>Username:</Text>
         <TextInput
           style={styles.input}
@@ -53,7 +53,7 @@ module.exports = React.createClass({
         console.log("successful login for user obj: " + user);
         this.props.navigator.push({name: 'stopwatch'});
       },
-      error: (data, error) => { this.setState({ errorMessage: error.message }); }
+      error: (data, error) => { this.setState({ errorMessage: "No stop watch for you! \n" + error.message }); }
     });
   }
 });
