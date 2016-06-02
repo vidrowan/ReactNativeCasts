@@ -13,7 +13,8 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       username: '',
-      password: ''
+      password: '',
+      errorMessage: ''
     };
   },
   render: function() {
