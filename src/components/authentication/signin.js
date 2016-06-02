@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 
+var Parse = require('parse/react-native');
 var Button = require('../common/button');
 
 module.exports = React.createClass({
