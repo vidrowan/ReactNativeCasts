@@ -9,13 +9,13 @@ import {
 var Button = require('../common/button');
 
 module.exports = React.createClass({
+  getInitialState: function() {
+    return {
+      username: '',
+      password: ''
+    };
+  },
   render: function() {
-    getInitialState: function() {
-      return {
-        username: '',
-        password: ''
-      };
-    },
     return (
       <View style={styles.container}>
         <Text>Sign In</Text>
