@@ -45,7 +45,7 @@ module.exports = React.createClass({
     // Log the user in
     Parse.User.logIn(this.state.username, this.state.password, {
       success: (user) => { console.log(user); },
-      error: (data, error) => { console.log(data, error); }
+      error: (data, error) => { this.setState({ errorMessage: error.message }); }
     });
   }
 });
