@@ -1,9 +1,11 @@
-var React = require('react-native');
-var {
-  Text,
+import React, { Component } from 'react';
+import {
   StyleSheet,
-  TouchableHighlight
-} = React;
+  Text,
+  TextInput,
+  TouchableHighlight,
+  View
+} from 'react-native';
 
 module.exports = React.createClass({
   render: function() {
